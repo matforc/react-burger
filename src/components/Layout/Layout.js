@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Aux from '../../hoc/Aux';
+import classes from './layout.css'
 
 const layout = (props) => {
 
@@ -9,8 +10,8 @@ const layout = (props) => {
         <Aux>
         <div>Toolbar,Sidedrawer, Bacldrop</div>
     
-        <main>
-            {props.children}
+        <main className={classes.Content}>
+            {props.children /*Questo prop.children è BurgerBuilder Component*/}
         </main>
     
         </Aux>
