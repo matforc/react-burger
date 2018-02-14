@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Aux from '../../hoc/Aux'
 import Burger from '../../components/Burger/Burger'
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
-
+import Modal from '../../components/UI/Modal/Modal';
+import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 
 const INGREDIENT_PRICES = {
     salad: 0.5,
@@ -98,6 +99,10 @@ class BurgerBuilder extends Component {
         
         return (  
             <Aux>
+                <Modal>
+                     <OrderSummary ingredients={this.state.ingredients}/>
+                </Modal>
+
                 {/*questo sarebbe la props da passare a burger component ingredients={this.state.ingredients}*/}
                 <Burger ingredients={this.state.ingredients}/>
                 <BuildControls 
@@ -107,6 +112,7 @@ class BurgerBuilder extends Component {
                 purchaseable = {this.state.purchaseable}
                 price={this.state.totalPrice}
                 />
+                
             </Aux> 
             
         )
