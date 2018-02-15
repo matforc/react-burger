@@ -27,6 +27,8 @@ const ingredientSummary =  Object.keys(props.ingredients)
                 {ingredientSummary}
             </ul>
             <p>Continue to checkout?</p>
+            <button>CANCEL</button>
+            <button>CONTINUE</button>
         </Aux>
     );
 }

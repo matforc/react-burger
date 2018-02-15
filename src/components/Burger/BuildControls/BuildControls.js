@@ -33,6 +33,7 @@ const buildControls = (props /* from containers/BurgerBuilder/BurgerBuilder.js *
         <button 
         className={classes.OrderButton}
         disabled = {!props.purchaseable}
+        onClick = {props.ordered}
         >ORDER NOW</button>
         </div>
     )
