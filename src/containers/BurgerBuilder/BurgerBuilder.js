@@ -97,6 +97,15 @@ class BurgerBuilder extends Component {
         this.setState({purchasing: !purchasing})
     }
     
+    continueHandler = () => {
+        console.log('cont');
+    }
+
+    cancelHandler = () => {
+        this.purchaseHandler();
+        console.log('cancel');
+    }
+
     render() { 
         const disabledInfo = {
             ...this.state.ingredients
@@ -108,7 +117,12 @@ class BurgerBuilder extends Component {
         return (  
             <Aux>
                 <Modal show={this.state.purchasing}>
-                     <OrderSummary ingredients={this.state.ingredients}/>
+
+                     <OrderSummary 
+                        ingredients={this.state.ingredients}
+                        cancel={this.cancelHandler} 
+                        continue={this.continueHandler}/>
+
                 </Modal>
 
                 {/*questo sarebbe la props da passare a burger component ingredients={this.state.ingredients}*/}

@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './Button.css';
 
-const button = (props) => {
+const button = (props /* from ./components/OrderSummary/OrderSummary.js */) => {
     return (
         <button
         onClick={props.clicked}
-        className={classes.ButtonContinue}>{props.children}</button>
+        className={[classes.Button, classes[props.btnType]].join(' ')}>{props.children}</button>
     )
 }
  
