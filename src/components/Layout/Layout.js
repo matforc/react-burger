@@ -1,14 +1,15 @@
 import React from 'react';
 
 import Aux from '../../hoc/Aux';
-import classes from './layout.css'
+import classes from './layout.css';
+import Toolbar from '../Navigation/Toolbar/Toolbar';
 
 const layout = (props) => {
 
     return (
 
         <Aux>
-        <div>Toolbar,Sidedrawer, Bacldrop</div>
+        <Toolbar />
     
         <main className={classes.Content}>
             {props.children /*Questo prop.children è BurgerBuilder Component*/}
