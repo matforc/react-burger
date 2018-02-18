@@ -1,0 +1,27 @@
+.Hamburger span{
+    width: 50px;
+    height: 5px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Hamburger:hover{
+    cursor: pointer;
+  }
+
+.Hamburger {
+    width: 60px;
+    height: 100%;
+    padding-top: 8px;
+    display: block;
+}
+
+@media (min-width:500px) {
+    .Hamburger {
+        display: none;
+    }
+}
