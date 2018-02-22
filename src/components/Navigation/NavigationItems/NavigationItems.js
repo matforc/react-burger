@@ -2,7 +2,6 @@ import React from 'react';
 import classes from './NavigationItems.css';
 
 import NavigationItem from './NavigationItem/NavigationItem';
-import BurgerBuilder from '../../../containers/BurgerBuilder/BurgerBuilder';
 
 const NavigationItems = (props) => {
     return (
